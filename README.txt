@@ -4,4 +4,4 @@ Build:
 g++ src/*.cpp -o calculator
 
 Run:
-./calculator  
+./calculator                              
