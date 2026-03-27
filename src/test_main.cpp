@@ -1,18 +1,18 @@
 #include <iostream>
-#include <assert.h>
-#include "calculator.h" // Assuming you have this header
-
-void test_addition() {
-    // Simple manual test if you don't have GTest installed
-    if (add(2, 2) == 4) { 
-        std::cout << "Test Passed!" << std::endl; 
-    } else {
-        std::cout << "Test Failed!" << std::endl;
-        exit(1);
-    }
-}
+#include "calculator.h"
 
 int main() {
-    test_addition();
-    return 0;
+    // 1. Create the Calculator object (the "instance")
+    Calculator calc; 
+
+    // 2. Call the 'add' method through the object
+    double result = calc.add(2.0, 2.0);
+
+    if (result == 4.0) {
+        std::cout << "Unit Test Passed: 2 + 2 = 4" << std::endl;
+        return 0; // Success
+    } else {
+        std::cerr << "Unit Test Failed!" << std::endl;
+        return 1; // Failure
+    }
 }
